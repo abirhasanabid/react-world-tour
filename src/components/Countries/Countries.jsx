@@ -15,13 +15,20 @@ const Countries = () => {
 
     const handleVisitedCountries = country =>{
         console.log(country);
+        const copingArray = [...visitedCountries,country];
+        setVisitedCountries(copingArray); 
     }
 
     return (
         <div>
             <h3>Countries : {countries.length}</h3>
             <div>
-                <p>hi this is me </p>
+                <p>visited contries : {visitedCountries.length}</p>
+                <ul>
+                    {
+                        visitedCountries.map(visitedCountry=><li key={visitedCountry?.ccn3}>Country Name : {visitedCountry?.name?.common}</li>)
+                    }
+                </ul>
             </div>
             <div className='countries-container'>
                 {
