@@ -16,14 +16,12 @@ const Countries = () => {
     }, []);
 
     const handleVisitedCountries = country =>{
-        console.log(country);
         const copingArray = [...visitedCountries,country];
         setVisitedCountries(copingArray); 
     }
     // flag handler
 
     const handlerFlag = flags=>{
-        // console.log(flags)
         const newFlag = [...visitedFlags,flags];
         setFlags(newFlag);
     }
